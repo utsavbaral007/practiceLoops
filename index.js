@@ -184,3 +184,20 @@ function sumTwoSmallestNumbers(numbers) {
     return small + small1
 }
 
+
+//mumbling
+//input[abcde], output[A-Bb-Ccc-Dddd-Eeeee]
+//input[wrt], output[W-Rr-Ttt]
+function accum(s) {
+    var arr = []
+    var splitStr = s.split('')
+    for (var i = 0; i < s.length; i++){
+        if(!s.match(/[a-zA-Z]+$/)){
+            return false
+        }
+        var str = splitStr[i].repeat(i+1)
+        var char = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
+        arr.push(char)
+    }
+    return arr.join('-')
+}
