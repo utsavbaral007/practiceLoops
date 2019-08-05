@@ -228,3 +228,18 @@ function likes(names) {
        }
     }
 }
+
+
+//find index of vowels
+//input(['utsav'], [1, 4])
+//input(['manchester], [2, 6, 9])
+function vowelIndices(word) {
+    word = word.toLowerCase()
+    var position = []
+    for (var i = 0; i < word.length; i++) {
+        if('aeiouy'.indexOf(word[i]) !== -1){
+        position.push(i+1)
+        }
+    }
+    return position
+}
